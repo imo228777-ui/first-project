@@ -6,3 +6,39 @@
 :root[data-theme="sage"]{--paper:#eef2e9;--paper2:#e4ebdf;--white:#fbfdf8;--green:#345b46;--green2:#4e765b;--sage:#d7e4d5;--sage2:#e5eee2;--line:#dce5d8}
 :root[data-theme="sand"]{--paper:#f5efe3;--paper2:#eee4d4;--white:#fffaf1;--green:#66503b;--green2:#8a6a48;--sage:#e9ddc8;--sage2:#f0e8da;--line:#e8ddcd}
 .profile-avatar{position:relative;overflow:visible}.profile-avatar.frame-gold{outline:2px solid #c59b55;outline-offset:2px}.profile-avatar.frame-sage{outline:2px solid #8aa58a;outline-offset:2px}.avatar-accessory{position:absolute;right:-6px;bottom:-5px;width:17px;height:17px;border-radius:50%;background:#fffefa;display:grid;place-items:center;font-style:normal;font-size:11px;box-shadow:0 1px 4px #24382f22}
+
+/* Art direction: editorial, illustrated, restrained */
+:root{--paper:#f7f6f1;--paper2:#efeee7;--white:#fffefa;--ink:#202e27;--green:#294b3b;--green2:#55745e;--sage:#dfe8dc;--sage2:#edf1e9;--muted:#78847a;--line:#e7e6de;--amber:#b88b51;--shadow:0 18px 55px rgba(31,49,39,.065)}
+body{background:#f7f6f1;color:var(--ink)}
+.sidebar{background:#f3f2eb;border-color:#e8e7df}
+.brand{font-size:25px;letter-spacing:-1.5px}.brand-mark{border-radius:12px;background:#294b3b}
+.nav-item{padding:13px 14px;border-radius:13px;font-size:13px}.nav-item.active{background:#e4ebe1}
+.nav-icon{width:21px;height:21px;display:grid;place-items:center}.nav-icon svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round}
+.main-area{max-width:1540px;padding-left:clamp(26px,4vw,62px);padding-right:clamp(26px,4vw,62px)}
+.topbar{height:78px;margin-bottom:45px}
+.feature-card{min-height:300px;border-radius:27px;background:linear-gradient(115deg,#284a3a 0%,#355744 100%);padding:34px}
+.feature-card h2{font-size:31px;letter-spacing:-1.2px}
+.feature-art{width:48%;height:100%;opacity:1}
+.journey-art{width:100%;height:100%;overflow:visible}
+.goal-card,.metric-card,.grammar-content,.settings-panel,.vocab-overview>div,.chapter-card,.exercise-card,.shop-item,.achievement,.community-feature{box-shadow:0 5px 22px rgba(37,53,43,.025);border-color:#e9e8e0}
+.goal-card{border-radius:23px;padding:25px}.metric-card{border-radius:19px;padding:22px}
+.section-title{margin:37px 0 15px}
+.lesson-tile{border-radius:18px;padding:17px;border-color:#e9e8e0;transition:transform .2s,box-shadow .2s}
+.lesson-tile:hover,.chapter-card:hover,.shop-item:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(37,53,43,.07)}
+.course-banner,.progress-hero{border-radius:25px;background:linear-gradient(120deg,#294b3b,#3b6049)}
+.course-seal{border-radius:23px;width:76px;height:76px}
+.chapter-card{padding:22px;border-radius:19px}
+.shop-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.shop-item{padding:14px;border-radius:20px;transition:transform .2s,box-shadow .2s}
+.shop-art{height:150px;border-radius:15px;background:linear-gradient(145deg,#f0f2eb,#e6ece3);overflow:hidden}
+.item-illustration{width:100%;height:100%;padding:14px;display:block}
+.inventory-chip{display:inline-flex;align-items:center;gap:8px;background:#edf1e9;border:1px solid #e0e8dd;border-radius:12px;padding:7px 11px}
+.inventory-chip .item-illustration{width:27px;height:27px;padding:0}
+.profile-avatar .item-illustration{width:100%;height:100%;padding:2px}
+.avatar-accessory{width:21px;height:21px;padding:1px}.avatar-accessory .item-illustration{width:100%;height:100%;padding:0}
+.community-intro{border-radius:25px;background:linear-gradient(110deg,#e8eee5,#f0f1e9)}
+.community-art{border-radius:24px;background:#dce6d9}
+.wallet-card{border-radius:20px}
+.mobile-nav{background:rgba(248,247,242,.97);border-color:#e7e6de}
+@media(max-width:1100px){.shop-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:760px){.main-area{padding:0 16px 105px}.topbar{margin-bottom:28px}.feature-card{min-height:260px;padding:23px 20px}.feature-art{width:53%;right:-9px;opacity:.9}.feature-copy{max-width:78%}.feature-card h2{font-size:25px}.shop-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.shop-art{height:112px}.shop-item{padding:10px}.metric-card{padding:13px}.journey-art{transform:scale(1.06);transform-origin:center right}}
