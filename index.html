@@ -3,120 +3,140 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#101713">
-<meta name="description" content="Speakly — учи языки в своём темпе. Уроки, слова, практика и прогресс.">
-<title>Speakly — учись каждый день</title>
-<style>
-:root{color-scheme:dark;--bg:#0b100e;--panel:#121a16;--panel2:#18231d;--line:#26352c;--text:#f0f6f1;--muted:#94a69a;--green:#9be15d;--green2:#67bd45;--yellow:#f5d36c;--red:#f07878;--radius:20px;--shadow:0 18px 50px #0005}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 75% -10%,#1e3827 0,transparent 38%),var(--bg);color:var(--text);font:15px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;min-height:100vh}button,input{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}.app{max-width:1240px;margin:auto;padding:22px 24px 100px}.top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:26px}.brand{display:flex;align-items:center;gap:11px;font-weight:850;letter-spacing:.08em;font-size:20px}.logo{width:38px;height:38px;border-radius:13px;background:linear-gradient(145deg,#c3fa81,#4b9c3e);display:grid;place-items:center;color:#10200f;font-weight:1000;box-shadow:0 7px 24px #83d65335}.topright{display:flex;gap:10px;align-items:center}.pill{display:flex;align-items:center;gap:7px;padding:9px 13px;border:1px solid var(--line);border-radius:999px;background:#121a16;color:var(--muted);font-size:13px}.avatar{width:37px;height:37px;border-radius:50%;display:grid;place-items:center;background:#263b2b;border:1px solid #49664d;color:var(--green);font-weight:800}.layout{display:grid;grid-template-columns:220px minmax(0,1fr);gap:24px}.sidebar{position:sticky;top:20px;align-self:start;background:#101713b8;border:1px solid var(--line);border-radius:var(--radius);padding:13px}.nav{display:grid;gap:5px}.nav button{border:0;background:transparent;color:var(--muted);padding:12px 13px;border-radius:13px;text-align:left;display:flex;align-items:center;gap:12px;font-weight:650}.nav button.active,.nav button:hover{background:#243328;color:var(--text)}.nav button.active .ico{color:var(--green)}.ico{width:22px;text-align:center;font-size:18px}.sidebottom{border-top:1px solid var(--line);margin-top:18px;padding:16px 10px 6px;color:var(--muted);font-size:12px}.main{min-width:0}.page{display:none}.page.active{display:block}.welcome{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin:4px 0 22px}.eyebrow{color:var(--green);font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:850}.welcome h1{font-size:clamp(26px,4vw,36px);line-height:1.1;margin:7px 0}.welcome p{color:var(--muted);margin:0}.date{color:var(--muted);font-size:12px}.grid{display:grid;grid-template-columns:1.45fr 1fr;gap:16px}.card{background:linear-gradient(145deg,#17221b,#111814);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}.hero{position:relative;overflow:hidden;min-height:220px;background:linear-gradient(115deg,#1c3524,#17231b 70%)}.hero:after{content:"";position:absolute;width:210px;height:210px;border-radius:50%;background:#9be15d12;right:-45px;top:-65px;box-shadow:0 0 0 30px #9be15d08,0 0 0 60px #9be15d05}.hero>*{position:relative;z-index:1}.hero h2{font-size:24px;max-width:400px;margin:8px 0}.hero p{color:#b3c6b5;max-width:380px;margin:0 0 18px}.btn{border:0;border-radius:12px;padding:11px 16px;background:var(--green);color:#14200f;font-weight:850;transition:.18s}.btn:hover{background:#b5f47d;transform:translateY(-1px)}.btn.secondary{background:#26372b;color:var(--text);border:1px solid #3a5140}.btn.ghost{background:transparent;border:1px solid var(--line);color:var(--text)}.btn.small{padding:8px 12px;font-size:13px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.stat{background:#101713;border:1px solid var(--line);border-radius:15px;padding:14px}.stat strong{display:block;font-size:23px;margin:3px 0}.stat span{font-size:12px;color:var(--muted)}.sectionhead{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:24px 0 12px}.sectionhead h2{font-size:18px;margin:0}.sectionhead button{border:0;background:none;color:var(--green);font-weight:750}.progress{height:8px;border-radius:99px;background:#29362d;overflow:hidden}.progress i{display:block;height:100%;background:linear-gradient(90deg,var(--green2),var(--green));border-radius:99px;transition:width .3s}.daily{display:grid;gap:13px}.dailyrow{display:flex;justify-content:space-between;gap:12px;font-size:13px}.muted{color:var(--muted)}.lessonlist{display:grid;gap:10px}.lesson{display:flex;align-items:center;gap:14px;padding:14px;background:#101713;border:1px solid var(--line);border-radius:15px}.lessonicon{width:44px;height:44px;display:grid;place-items:center;background:#25382a;border-radius:13px;font-size:21px}.lessoninfo{flex:1;min-width:0}.lessoninfo b{display:block}.lessoninfo small{color:var(--muted)}.tag{font-size:11px;padding:5px 8px;border-radius:99px;background:#26372b;color:var(--green);white-space:nowrap}.pagehead{margin:6px 0 20px}.pagehead h1{font-size:29px;margin:5px 0}.pagehead p{color:var(--muted);margin:0}.lessonstage{max-width:700px;margin:0 auto}.questioncard{padding:clamp(20px,5vw,34px);min-height:330px}.qtop{display:flex;justify-content:space-between;color:var(--muted);font-size:13px}.qword{font-size:clamp(30px,7vw,44px);font-weight:900;margin:30px 0 5px}.qhint{color:var(--muted);margin-bottom:25px}.answers{display:grid;grid-template-columns:1fr 1fr;gap:10px}.answer{padding:14px;border:1px solid var(--line);border-radius:13px;background:#111914;color:var(--text);text-align:left;font-weight:650}.answer:hover{border-color:var(--green)}.answer.correct{border-color:var(--green);background:#203c27}.answer.wrong{border-color:var(--red);background:#3a2222}.feedback{margin-top:16px;min-height:26px;font-weight:700}.flashcard{min-height:260px;display:grid;place-items:center;text-align:center;cursor:pointer;user-select:none}.flashcard .big{font-size:42px;font-weight:900}.flashcard .smalltxt{color:var(--muted);margin-top:8px}.wordtools{display:flex;justify-content:center;gap:10px;margin-top:15px}.search{width:100%;background:#101713;border:1px solid var(--line);border-radius:12px;padding:13px 15px;color:var(--text);outline:none;margin-bottom:13px}.search:focus{border-color:var(--green)}.wordrow{display:flex;justify-content:space-between;align-items:center;padding:13px 2px;border-bottom:1px solid var(--line)}.wordrow b{display:block}.wordrow small{color:var(--muted)}.shopgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.shopitem{background:#101713;border:1px solid var(--line);border-radius:16px;padding:16px}.shopart{height:82px;border-radius:12px;background:linear-gradient(135deg,#243c2a,#18251c);display:grid;place-items:center;font-size:34px;margin-bottom:12px}.shopitem h3{font-size:14px;margin:0 0 4px}.shopitem p{font-size:12px;color:var(--muted);margin:0 0 12px}.shopitem .btn{width:100%}.leaderrow{display:flex;align-items:center;gap:12px;padding:13px;border-bottom:1px solid var(--line)}.rank{width:26px;color:var(--muted);font-weight:800}.leaderrow:nth-child(2) .rank{color:var(--yellow)}.leaderrow .avatar{flex-shrink:0}.leaderrow .grow{flex:1}.profilebox{display:flex;align-items:center;gap:16px;padding:20px}.profilebig{width:65px;height:65px;font-size:24px}.settingsrow{display:flex;justify-content:space-between;align-items:center;padding:15px 0;border-bottom:1px solid var(--line)}select{background:#101713;color:var(--text);border:1px solid var(--line);border-radius:10px;padding:9px}.toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%);background:#e5f7d8;color:#152112;padding:11px 17px;border-radius:12px;font-weight:800;box-shadow:var(--shadow);z-index:20;opacity:0;pointer-events:none;transition:.2s}.toast.show{opacity:1}.mobilebar{display:none}.empty{padding:30px;text-align:center;color:var(--muted)}footer{color:#64766a;text-align:center;font-size:11px;margin:30px 0 0}
-@media(max-width:760px){.app{padding:15px 14px 100px}.layout{display:block}.sidebar{display:none}.top{margin-bottom:20px}.topright .pill:first-child{display:none}.welcome{display:block}.date{margin-top:10px}.grid{grid-template-columns:1fr}.stats{gap:8px}.stat{padding:12px}.stat strong{font-size:20px}.shopgrid{grid-template-columns:1fr 1fr}.mobilebar{display:grid;grid-template-columns:repeat(5,1fr);position:fixed;bottom:0;left:0;right:0;padding:9px 7px calc(9px + env(safe-area-inset-bottom));background:#101713f2;backdrop-filter:blur(18px);border-top:1px solid var(--line);z-index:10}.mobilebar button{border:0;background:none;color:var(--muted);font-size:10px;display:grid;justify-items:center;gap:3px;padding:5px 0}.mobilebar button span{font-size:19px}.mobilebar button.active{color:var(--green)}.answers{grid-template-columns:1fr}.hero{min-height:210px}.card{padding:17px}.questioncard{padding:20px}.lesson{padding:11px}.lesson .tag{display:none}}
-@media(min-width:761px){.mobilebar{display:none!important}}
-</style>
+<meta name="theme-color" content="#f5f3eb">
+<meta name="description" content="Speakly — спокойное и умное пространство для изучения языков.">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='28' fill='%232c4b3d'/%3E%3Cpath d='M65 27c-5-5-12-7-21-7-16 0-26 8-26 20 0 11 8 16 25 20 12 3 16 5 16 10 0 5-5 8-14 8-9 0-17-4-23-10l-9 11c8 9 19 14 32 14 18 0 29-9 29-23 0-12-8-18-25-22-12-3-16-5-16-9 0-4 4-7 12-7 7 0 14 3 19 8z' fill='%23f5f3eb'/%3E%3C/svg%3E">
+<title>Speakly — учись в своём темпе</title>
+<link rel="stylesheet" href="./app.css">
 </head>
 <body>
-<div class="app">
-<header class="top">
- <a class="brand" href="#" aria-label="Speakly"><span class="logo">S</span><span>SPEAKLY</span></a>
- <div class="topright"><div class="pill">🔥 <b id="topStreak">0</b> <span>дней</span></div><div class="pill">✦ <b id="topXp">0</b> XP</div><div class="avatar" id="topAvatar">E</div></div>
-</header>
-<div class="layout">
-<aside class="sidebar"><nav class="nav" id="sideNav">
-<button class="active" data-page="home"><span class="ico">⌂</span>Главная</button>
-<button data-page="learn"><span class="ico">◈</span>Обучение</button>
-<button data-page="words"><span class="ico">▤</span>Мои слова</button>
-<button data-page="shop"><span class="ico">✧</span>Магазин</button>
-<button data-page="club"><span class="ico">♧</span>Сообщество</button>
-<button data-page="profile"><span class="ico">◎</span>Профиль</button>
-</nav><div class="sidebottom">Маленькие шаги — большой прогресс.<br><span style="color:var(--green)">Учись в своём темпе.</span></div></aside>
-<main class="main">
-<section class="page active" id="page-home">
- <div class="welcome"><div><div class="eyebrow">ТВОЁ ПРОСТРАНСТВО ДЛЯ РОСТА</div><h1>С возвращением, Explorer!</h1><p>Сегодня — отличный день, чтобы узнать что-то новое.</p></div><div class="date" id="today"></div></div>
- <div class="grid">
-  <div class="card hero"><div class="eyebrow">ТВОЙ СЛЕДУЮЩИЙ ШАГ</div><h2>Каждый день — ближе к свободному общению.</h2><p>Продолжи путь в немецком. Один короткий урок уже поможет продвинуться вперёд.</p><button class="btn" data-go="learn">Продолжить обучение <span>→</span></button></div>
-  <div class="card daily"><div class="sectionhead" style="margin:0"><h2>Цель на сегодня</h2><span class="tag">ЕЖЕДНЕВНО</span></div><div class="dailyrow"><span>Получить 20 XP</span><b id="goalText">0 / 20</b></div><div class="progress"><i id="goalBar" style="width:0%"></i></div><div class="dailyrow"><span class="muted">Награда за цель</span><b style="color:var(--green)">+5 ✦</b></div><div class="dailyrow"><span class="muted">Текущая серия</span><b>🔥 <span id="streak">0</span> дней</b></div></div>
- </div>
- <div class="sectionhead"><h2>Твой прогресс</h2><button data-go="profile">Подробнее →</button></div>
- <div class="stats"><div class="stat"><span>Всего опыта</span><strong id="statXp">0</strong><span>✦ XP</span></div><div class="stat"><span>Изучено слов</span><strong id="statWords">0</strong><span>в твоём словаре</span></div><div class="stat"><span>Уровень</span><strong id="statLevel">1</strong><span>Explorer</span></div></div>
- <div class="sectionhead"><h2>Продолжить путь</h2><button data-go="learn">Все уроки →</button></div>
- <div class="lessonlist"><div class="lesson"><div class="lessonicon">🇩🇪</div><div class="lessoninfo"><b>Первые немецкие слова</b><small>Начальный уровень · 5 заданий</small></div><span class="tag">БАЗА</span></div><div class="lesson"><div class="lessonicon">🧠</div><div class="lessoninfo"><b>Повторение слов</b><small>Карточки и проверка памяти</small></div><button class="btn small secondary" data-go="words">Открыть</button></div></div>
-</section>
-<section class="page" id="page-learn">
- <div class="pagehead"><div class="eyebrow">LEARN · УРОКИ</div><h1>Обучение</h1><p>Начинаем с основ немецкого языка. Не спеши — важнее понять слово.</p></div>
- <div class="card lessonstage" id="lessonCard">
-  <div class="qtop"><span id="qProgress">УРОК 1 · 1 ИЗ 5</span><span>🇩🇪 Немецкий</span></div>
-  <div class="progress" style="margin:13px 0 24px"><i id="lessonBar" style="width:20%"></i></div>
-  <div class="eyebrow">ВЫБЕРИ ПРАВИЛЬНЫЙ ПЕРЕВОД</div>
-  <div class="qword" id="qWord">Hallo</div><div class="qhint" id="qHint">Что означает это слово?</div>
-  <div class="answers" id="answers"></div><div class="feedback" id="feedback" aria-live="polite"></div>
-  <div style="display:flex;justify-content:flex-end;margin-top:14px"><button class="btn" id="nextQuestion" disabled>Дальше →</button></div>
- </div>
-</section>
-<section class="page" id="page-words">
- <div class="pagehead"><div class="eyebrow">YOUR VOCABULARY</div><h1>Мои слова</h1><p>Слова, которые ты уже встречал в обучении.</p></div>
- <div class="card"><div style="display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:14px"><b>Немецкий · Начальный</b><span class="tag" id="wordCount">0 слов</span></div><input class="search" id="wordSearch" placeholder="Найти слово или перевод…"><div id="wordList"></div><div class="wordtools"><button class="btn secondary" id="flipCard">Перевернуть карточку</button><button class="btn" id="knownCard">Знаю слово ✓</button></div><div class="flashcard" id="flashcard"><div><div class="big" id="flashWord">Hallo</div><div class="smalltxt" id="flashMeaning">Нажми «Перевернуть карточку»</div></div></div></div>
-</section>
-<section class="page" id="page-shop">
- <div class="pagehead"><div class="eyebrow">PERSONALIZE YOUR JOURNEY</div><h1>Магазин</h1><p>Открывай оформление и предметы за заработанные монеты.</p></div>
- <div class="card" style="margin-bottom:15px;display:flex;justify-content:space-between;align-items:center"><span>Твой баланс</span><b style="color:var(--green);font-size:22px">✦ <span id="coins">0</span></b></div>
- <div class="shopgrid" id="shopGrid"></div>
-</section>
-<section class="page" id="page-club">
- <div class="pagehead"><div class="eyebrow">TOGETHER IS BETTER</div><h1>Сообщество</h1><p>Учись вместе с другими Explorer.</p></div>
- <div class="card"><div class="eyebrow">СКОРО В SPEAKLY</div><h2>Клубы и совместные цели</h2><p class="muted">Здесь появятся языковые клубы, командные задания, события и рейтинги. Сейчас ты можешь развивать личный прогресс — социальные функции подключим следующим этапом.</p><div class="tag" style="display:inline-block">В РАЗРАБОТКЕ</div></div>
- <div class="sectionhead"><h2>Как будет устроено</h2></div><div class="lessonlist"><div class="lesson"><div class="lessonicon">♧</div><div class="lessoninfo"><b>Языковые клубы</b><small>Общение и общие цели</small></div></div><div class="lesson"><div class="lessonicon">🏆</div><div class="lessoninfo"><b>Смешанные рейтинги</b><small>Личный прогресс и командные достижения</small></div></div><div class="lesson"><div class="lessonicon">🎯</div><div class="lessoninfo"><b>События и челленджи</b><small>Задания с наградами</small></div></div></div>
-</section>
-<section class="page" id="page-profile">
- <div class="pagehead"><div class="eyebrow">YOUR IDENTITY</div><h1>Профиль</h1><p>Твой путь в изучении языков.</p></div>
- <div class="card profilebox"><div class="avatar profilebig" id="profileAvatar">E</div><div><h2 style="margin:0 0 3px">Explorer</h2><div class="muted">Уровень <span id="profileLevel">1</span> · Начинающий</div><div class="tag" style="display:inline-block;margin-top:7px">🇩🇪 Изучает немецкий</div></div></div>
- <div class="sectionhead"><h2>Статистика</h2></div><div class="stats"><div class="stat"><span>Опыт</span><strong id="profileXp">0</strong><span>XP</span></div><div class="stat"><span>Слова</span><strong id="profileWords">0</strong><span>изучено</span></div><div class="stat"><span>Серия</span><strong id="profileStreak">0</strong><span>дней</span></div></div>
- <div class="sectionhead"><h2>Настройки</h2></div><div class="card"><div class="settingsrow"><span>Язык обучения</span><select id="languageSelect"><option value="de">🇩🇪 Немецкий</option><option value="en">🇬🇧 Английский (скоро)</option><option value="es">🇪🇸 Испанский (скоро)</option></select></div><div class="settingsrow"><span>Ежедневная цель</span><select id="goalSelect"><option value="10">10 XP</option><option value="20" selected>20 XP</option><option value="30">30 XP</option><option value="50">50 XP</option></select></div><div class="settingsrow"><span>Локальный прогресс</span><button class="btn ghost small" id="resetProgress">Сбросить</button></div><p class="muted" style="font-size:12px;margin-bottom:0">Пока это демоверсия: прогресс хранится в браузере на этом устройстве. Аккаунты и синхронизация появятся на следующем этапе.</p></div>
-</section>
-<footer>Speakly · Learn at your own pace · Prototype 0.1</footer>
-</main>
+<div class="app-shell">
+  <aside class="sidebar">
+    <a class="brand" href="#home"><span class="brand-mark">s</span><span>speakly<span class="brand-dot">.</span></span></a>
+    <div class="side-label">ТВОЁ ПРОСТРАНСТВО</div>
+    <nav id="sideNav" class="side-nav">
+      <button class="nav-item active" data-page="home"><span class="nav-icon">⌂</span>Главная</button>
+      <button class="nav-item" data-page="learn"><span class="nav-icon">◌</span>Обучение</button>
+      <button class="nav-item" data-page="vocabulary"><span class="nav-icon">▤</span>Словарь</button>
+      <button class="nav-item" data-page="grammar"><span class="nav-icon">Aa</span>Грамматика</button>
+      <button class="nav-item" data-page="progress"><span class="nav-icon">↗</span>Мой прогресс</button>
+      <button class="nav-item" data-page="shop"><span class="nav-icon">✳</span>Магазин</button>
+      <button class="nav-item" data-page="community"><span class="nav-icon">♧</span>Клубы</button>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="mini-explorer" aria-hidden="true"><div class="explorer-face">◡</div><span class="spark s1">✦</span><span class="spark s2">·</span></div>
+      <p><b>Маленькие шаги.</b><br>Большие открытия.</p>
+      <span class="side-version">SPEAKLY · EARLY ACCESS</span>
+    </div>
+  </aside>
+
+  <main class="main-area">
+    <header class="topbar">
+      <button class="mobile-brand" data-page="home"><span class="brand-mark">s</span> speakly<span class="brand-dot">.</span></button>
+      <div class="topbar-spacer"></div>
+      <div class="top-stat"><span class="stat-flame">↗</span><span id="topStreak">0</span><small>дней</small></div>
+      <div class="top-stat"><span class="stat-star">✳</span><span id="topXp">0</span><small>XP</small></div>
+      <button class="profile-chip" data-page="profile"><span class="profile-avatar" id="topAvatar">E</span><span id="topName">Explorer</span><span class="chevron">⌄</span></button>
+    </header>
+
+    <section class="page active" id="page-home">
+      <div class="welcome-row"><div><div class="eyebrow">ТВОЙ ЯЗЫКОВОЙ МАРШРУТ</div><h1>С возвращением<span class="title-period">.</span></h1><p class="lead">Немного практики сегодня — уверенность завтра.</p></div><div class="date-note" id="todayLabel"></div></div>
+      <div class="home-grid">
+        <article class="feature-card">
+          <div class="feature-copy"><span class="eyebrow light">ПРОДОЛЖИТЬ ПУТЬ · НЕМЕЦКИЙ A1</span><h2>Новые слова.<br>Новые возможности.</h2><p>Продолжай знакомство с немецким — в своём темпе, без спешки.</p><button class="button button-light" data-page="learn">К следующему уроку <span>↗</span></button></div>
+          <div class="feature-art" aria-hidden="true"><div class="sun-disc"></div><div class="hill hill-back"></div><div class="hill hill-front"></div><div class="path-line"></div><div class="mascot"><div class="mascot-ear left"></div><div class="mascot-ear right"></div><div class="mascot-body"><i></i><i></i><b></b></div><div class="mascot-scarf"></div></div><span class="art-star star-a">✳</span><span class="art-star star-b">·</span></div>
+        </article>
+        <article class="goal-card">
+          <div class="card-heading"><div><span class="eyebrow">ТВОЙ РИТМ</span><h3>Цель на сегодня</h3></div><span class="goal-icon">◷</span></div>
+          <div class="goal-number"><strong id="goalValue">0</strong><span>/ <span id="goalTarget">20</span> XP</span></div>
+          <div class="progress-track"><i id="goalProgress"></i></div>
+          <div class="goal-foot"><span>Ещё немного — и готово</span><b>+5 ✳</b></div>
+          <div class="goal-divider"></div>
+          <div class="streak-line"><span class="streak-symbol">↗</span><span>Твоя серия</span><strong id="homeStreak">0 дней</strong></div>
+        </article>
+      </div>
+      <div class="section-title"><div><span class="eyebrow">ТВОИ РЕЗУЛЬТАТЫ</span><h2>Всё начинается с малого</h2></div><button class="text-button" data-page="progress">Вся статистика ↗</button></div>
+      <div class="metric-grid">
+        <div class="metric-card"><span class="metric-label">Накоплено опыта</span><strong id="homeXp">0</strong><small>баллов XP</small><span class="metric-decoration">✳</span></div>
+        <div class="metric-card"><span class="metric-label">Слова в коллекции</span><strong id="homeWords">0</strong><small>немецких слов</small><span class="metric-decoration">Aa</span></div>
+        <div class="metric-card"><span class="metric-label">Твой уровень</span><strong id="homeLevel">1</strong><small id="homeLevelName">Начинающий</small><span class="metric-decoration">↗</span></div>
+      </div>
+      <div class="section-title"><div><span class="eyebrow">ТВОЙ СЛЕДУЮЩИЙ ШАГ</span><h2>Подобрали для тебя</h2></div><button class="text-button" data-page="learn">Все уроки ↗</button></div>
+      <div id="homeLessons" class="lesson-cards"></div>
+      <div class="section-title"><div><span class="eyebrow">НЕ ЗАБЫВАЙ ПОВТОРЯТЬ</span><h2>Слова ждут тебя</h2></div><button class="text-button" data-page="vocabulary">Открыть словарь ↗</button></div>
+      <div class="review-banner"><div class="review-symbol">Aa</div><div><b>Пять минут на повторение</b><p>Закрепи то, что уже выучил. Так знания остаются с тобой дольше.</p></div><button class="button button-outline" data-action="review">Повторить слова</button></div>
+    </section>
+
+    <section class="page" id="page-learn">
+      <div class="page-heading"><span class="eyebrow">LEARN · НЕМЕЦКИЙ A1</span><h1>Твой путь начинается здесь<span class="title-period">.</span></h1><p class="lead">Короткие главы, понятные объяснения и практика после каждой темы.</p></div>
+      <div class="course-banner"><div><span class="eyebrow light">ТВОЙ ПЕРВЫЙ КУРС</span><h2>Deutsch für den Alltag</h2><p>Немецкий для повседневной жизни · Уровень A1</p></div><div class="course-seal">DE<br><small>A1</small></div></div>
+      <div class="chapter-list" id="chapterList"></div>
+    </section>
+
+    <section class="page" id="page-lesson">
+      <div class="lesson-topline"><button class="back-button" data-page="learn">← К главам</button><span id="lessonChapterLabel">ГЛАВА 1</span></div>
+      <div class="lesson-layout">
+        <div class="lesson-main">
+          <div class="lesson-progress-meta"><span id="lessonStepLabel">ЗАДАНИЕ 1 ИЗ 8</span><span id="lessonPercent">0%</span></div>
+          <div class="progress-track"><i id="lessonProgress"></i></div>
+          <div class="exercise-card" id="exerciseCard"></div>
+          <div id="lessonFeedback" class="lesson-feedback" aria-live="polite"></div>
+          <div class="lesson-controls"><button class="button button-outline" id="lessonSkip">Пропустить</button><button class="button button-primary" id="lessonNext" disabled>Проверить ответ</button></div>
+        </div>
+        <aside class="lesson-aside"><div class="aside-note"><span class="eyebrow">ПОДСКАЗКА</span><p id="lessonTip">Не торопись. Внимательно прочитай задание.</p></div><div class="aside-note explorer-note"><div class="mini-explorer small-explorer"><div class="explorer-face">◡</div></div><b>Ты справишься!</b><p>Ошибки — часть обучения. Главное, понять почему.</p></div></aside>
+      </div>
+    </section>
+
+    <section class="page" id="page-vocabulary">
+      <div class="page-heading"><span class="eyebrow">YOUR WORD COLLECTION</span><h1>Твой словарь<span class="title-period">.</span></h1><p class="lead">Собирай слова, отмечай знакомые и возвращайся к ним для повторения.</p></div>
+      <div class="vocab-overview"><div><span class="eyebrow">ИЗУЧЕНО</span><strong id="vocabTotal">0</strong><small>слов сохранено</small></div><div><span class="eyebrow">НА ПОВТОРЕНИЕ</span><strong id="vocabDue">0</strong><small>пора освежить память</small></div><div><span class="eyebrow">ИЗБРАННОЕ</span><strong id="vocabFav">0</strong><small>важные слова</small></div></div>
+      <div class="vocab-toolbar"><input id="vocabSearch" class="field" type="search" placeholder="Найти слово или перевод…"><select id="vocabFilter" class="field select-field"><option value="all">Все слова</option><option value="learned">Изученные</option><option value="favorite">Избранное</option><option value="due">На повторение</option></select></div>
+      <div id="vocabList" class="vocab-list"></div>
+      <div class="section-title"><div><span class="eyebrow">ACTIVE RECALL</span><h2>Карточки для повторения</h2></div></div>
+      <div class="flashcard-wrap"><button id="flashcard" class="flashcard"><span class="flashcard-label">НЕМЕЦКИЙ</span><strong id="flashFront">Hallo</strong><span id="flashBack" class="flashcard-back hidden">Привет</span><small id="flashInstruction">Нажми, чтобы увидеть перевод</small></button><div class="flash-actions"><button class="button button-outline" id="flashAgain">Нужно повторить</button><button class="button button-primary" id="flashKnown">Помню ✓</button></div></div>
+    </section>
+
+    <section class="page" id="page-grammar">
+      <div class="page-heading"><span class="eyebrow">GRAMMAR, MADE CLEAR</span><h1>Грамматика без паники<span class="title-period">.</span></h1><p class="lead">Короткие объяснения, примеры и небольшие проверки.</p></div>
+      <div class="grammar-layout"><div class="grammar-menu" id="grammarMenu"></div><article class="grammar-content" id="grammarContent"></article></div>
+    </section>
+
+    <section class="page" id="page-progress">
+      <div class="page-heading"><span class="eyebrow">YOUR JOURNEY SO FAR</span><h1>Посмотри, как далеко ты прошёл<span class="title-period">.</span></h1><p class="lead">Каждый урок и каждое новое слово складываются в результат.</p></div>
+      <div class="progress-hero"><div><span class="eyebrow light">ТВОЙ УРОВЕНЬ</span><div class="level-number" id="progressLevel">1</div><h2 id="progressRank">Explorer · Начинающий</h2><p id="nextLevelText">До следующего уровня — 100 XP</p><div class="level-track"><i id="levelProgress"></i></div></div><div class="level-emblem">✳</div></div>
+      <div class="metric-grid progress-metrics"><div class="metric-card"><span class="metric-label">Всего XP</span><strong id="progressXp">0</strong><small>опыта накоплено</small></div><div class="metric-card"><span class="metric-label">Уроки</span><strong id="progressLessons">0</strong><small>завершено</small></div><div class="metric-card"><span class="metric-label">Слова</span><strong id="progressWords">0</strong><small>изучено</small></div></div>
+      <div class="section-title"><div><span class="eyebrow">CONSISTENCY</span><h2>Активность за неделю</h2></div></div><div class="week-chart" id="weekChart"></div>
+      <div class="section-title"><div><span class="eyebrow">MILESTONES</span><h2>Твои достижения</h2></div></div><div class="achievement-grid" id="achievementGrid"></div>
+    </section>
+
+    <section class="page" id="page-shop">
+      <div class="page-heading"><span class="eyebrow">MAKE IT YOURS</span><h1>Место для маленьких радостей<span class="title-period">.</span></h1><p class="lead">Украшай профиль, собирай коллекции и открывай новые образы Explorer.</p></div>
+      <div class="wallet-card"><div><span class="eyebrow">ТВОИ МОНЕТЫ</span><strong>✳ <span id="shopCoins">0</span></strong></div><p>Монеты начисляются за занятия и выполненные цели.</p></div>
+      <div class="shop-tabs" id="shopTabs"><button class="active" data-shop-filter="all">Всё</button><button data-shop-filter="theme">Темы</button><button data-shop-filter="avatar">Аватары</button><button data-shop-filter="accessory">Аксессуары</button><button data-shop-filter="frame">Рамки</button></div>
+      <div id="shopGrid" class="shop-grid"></div>
+      <div class="section-title"><div><span class="eyebrow">YOUR COLLECTION</span><h2>Уже открыто</h2></div></div><div id="inventoryGrid" class="inventory-grid"></div>
+    </section>
+
+    <section class="page" id="page-community">
+      <div class="page-heading"><span class="eyebrow">LEARN TOGETHER</span><h1>Учиться интереснее вместе<span class="title-period">.</span></h1><p class="lead">Клубы и совместные цели — часть будущего Speakly.</p></div>
+      <div class="community-intro"><div class="community-art">♧</div><div><span class="eyebrow">COMMUNITY SPACE</span><h2>Твоё место среди Explorer</h2><p>Здесь будут тематические клубы, командные задания, события и рейтинги по учебной активности.</p><span class="status-pill">СОЦИАЛЬНЫЙ МОДУЛЬ В РАЗРАБОТКЕ</span></div></div>
+      <div class="community-features"><div class="community-feature"><b>01 · Клубы</b><p>Объединяйся с людьми, которые учат тот же язык.</p></div><div class="community-feature"><b>02 · Челленджи</b><p>Выполняй общие цели и получай награды.</p></div><div class="community-feature"><b>03 · Рейтинги</b><p>Сравнивай прогресс в честных учебных лигах.</p></div></div>
+    </section>
+
+    <section class="page" id="page-profile">
+      <div class="page-heading"><span class="eyebrow">YOUR ACCOUNT</span><h1>Твой профиль<span class="title-period">.</span></h1><p class="lead">Настрой Speakly под себя.</p></div>
+      <div class="profile-panel"><div class="profile-avatar large" id="profileAvatar">E</div><div class="profile-details"><h2 id="profileName">Explorer</h2><p id="profileLevelText">Уровень 1 · Начинающий</p><button class="text-button" id="editName">Изменить имя ↗</button></div></div>
+      <div class="settings-panel"><div class="settings-heading"><span class="eyebrow">PREFERENCES</span><h2>Настройки обучения</h2></div><label class="setting-row"><span><b>Язык курса</b><small>Сейчас доступен курс немецкого A1</small></span><select id="languageSetting" class="field select-field"><option value="de">🇩🇪 Немецкий</option></select></label><label class="setting-row"><span><b>Ежедневная цель</b><small>Сколько опыта хочешь набирать в день</small></span><select id="goalSetting" class="field select-field"><option value="10">10 XP</option><option value="20">20 XP</option><option value="30">30 XP</option><option value="50">50 XP</option></select></label><label class="setting-row"><span><b>Напоминания</b><small>Локальное напоминание в интерфейсе</small></span><input id="remindersSetting" type="checkbox" class="toggle"></label></div>
+      <div class="settings-panel danger-panel"><div><span class="eyebrow">YOUR DATA</span><h2>Данные и приватность</h2><p>Прогресс сейчас хранится локально в браузере этого устройства. Не очищай данные браузера, если хочешь сохранить его.</p></div><div class="data-actions"><button class="button button-outline" id="exportData">Экспортировать данные</button><button class="button button-danger" id="resetData">Сбросить прогресс</button></div></div>
+      <p class="privacy-note">Гостевой режим · Без регистрации · Данные остаются на этом устройстве.</p>
+    </section>
+  </main>
 </div>
-</div>
-<nav class="mobilebar" id="mobileNav"><button class="active" data-page="home"><span>⌂</span>Главная</button><button data-page="learn"><span>◈</span>Учёба</button><button data-page="words"><span>▤</span>Слова</button><button data-page="shop"><span>✧</span>Магазин</button><button data-page="profile"><span>◎</span>Профиль</button></nav>
-<div class="toast" id="toast" role="status"></div>
-<script>
-(()=>{
-const $=id=>document.getElementById(id);
-const bank=[
- {de:"Hallo",ru:"Привет",opts:["Привет","Пока","Спасибо","Пожалуйста"],hint:"Приветствие"},
- {de:"Danke",ru:"Спасибо",opts:["Извините","Спасибо","Доброе утро","До свидания"],hint:"Вежливость"},
- {de:"Bitte",ru:"Пожалуйста",opts:["Пожалуйста","Да","Нет","Хорошо"],hint:"Вежливость"},
- {de:"Ja",ru:"Да",opts:["Нет","Может быть","Да","Почему"],hint:"Короткий ответ"},
- {de:"Nein",ru:"Нет",opts:["Да","Нет","Здесь","Сейчас"],hint:"Короткий ответ"},
- {de:"Wasser",ru:"Вода",opts:["Хлеб","Вода","Дом","Книга"],hint:"Предметы вокруг нас"},
- {de:"Haus",ru:"Дом",opts:["Школа","Город","Дом","Машина"],hint:"Место"},
- {de:"Buch",ru:"Книга",opts:["Книга","Стол","Окно","Ручка"],hint:"Предметы"},
- {de:"Freund",ru:"Друг",opts:["Учитель","Друг","Брат","Сосед"],hint:"Люди"},
- {de:"Guten Morgen",ru:"Доброе утро",opts:["Спокойной ночи","Добрый вечер","Доброе утро","Добрый день"],hint:"Приветствие"}
-];
-const items=[{id:"leaf",name:"Тема «Лес»",desc:"Спокойное зелёное оформление",icon:"🌿",cost:30},{id:"star",name:"Аватар «Звезда»",desc:"Новый значок профиля",icon:"🌟",cost:50},{id:"night",name:"Тема «Ночь»",desc:"Тёмная атмосфера Explorer",icon:"🌙",cost:40},{id:"fox",name:"Аксессуар «Лис»",desc:"Маленький спутник в профиле",icon:"🦊",cost:70},{id:"flame",name:"Рамка «Пламя»",desc:"Огненная рамка профиля",icon:"🔥",cost:90},{id:"book",name:"Коллекция «Знание»",desc:"Значок коллекционера",icon:"📚",cost:60}];
-const fresh=()=>({xp:0,coins:0,streak:0,goal:20,goalXp:0,learned:[],completed:[],owned:[],lastDay:"",lang:"de"});
-let state;try{state={...fresh(),...JSON.parse(localStorage.getItem("speakly-v01")||"{}")}}catch{state=fresh()}
-function save(){localStorage.setItem("speakly-v01",JSON.stringify(state));render()}
-function toast(msg){const el=$("toast");el.textContent=msg;el.classList.add("show");clearTimeout(toast.t);toast.t=setTimeout(()=>el.classList.remove("show"),2100)}
-function dayKey(){const d=new Date();return d.getFullYear()+"-"+d.getMonth()+"-"+d.getDate()}
-function activity(){const d=dayKey();if(state.lastDay!==d){const y=new Date();y.setDate(y.getDate()-1);const prev=y.getFullYear()+"-"+y.getMonth()+"-"+y.getDate();state.streak=state.lastDay===prev?state.streak+1:1;state.lastDay=d;state.goalXp=0}}
-function addXP(n){activity();state.xp+=n;state.goalXp+=n;state.coins+=Math.floor(n/4);if(state.goalXp>=state.goal&&!state.completed.includes(dayKey())){state.coins+=5;state.completed.push(dayKey());toast("Цель выполнена! +5 монет ✦")}save()}
-function level(){return Math.floor(state.xp/100)+1}
-function go(page){document.querySelectorAll(".page").forEach(p=>p.classList.toggle("active",p.id==="page-"+page));document.querySelectorAll("[data-page]").forEach(b=>b.classList.toggle("active",b.dataset.page===page));window.scrollTo({top:0,behavior:"smooth"});if(page==="words")renderWords()}
-document.querySelectorAll("[data-page]").forEach(b=>b.addEventListener("click",()=>go(b.dataset.page)));
-document.querySelectorAll("[data-go]").forEach(b=>b.addEventListener("click",()=>go(b.dataset.go)));
-$("today").textContent=new Intl.DateTimeFormat("ru-RU",{weekday:"long",day:"numeric",month:"long"}).format(new Date());
-let qi=0,chosen=false,cardIndex=0,flipped=false;
-function renderQuestion(){const q=bank[qi];chosen=false;$("qProgress").textContent="УРОК 1 · "+(qi+1)+" ИЗ "+bank.length;$("lessonBar").style.width=((qi+1)/bank.length*100)+"%";$("qWord").textContent=q.de;$("qHint").textContent=q.hint+" · Что означает это слово?";$("feedback").textContent="";$("nextQuestion").disabled=true;$("nextQuestion").textContent=qi===bank.length-1?"Завершить урок ✓":"Дальше →";$("answers").innerHTML="";q.opts.forEach(opt=>{const b=document.createElement("button");b.className="answer";b.textContent=opt;b.addEventListener("click",()=>answer(opt,b));$("answers").append(b)})}
-function answer(opt,btn){if(chosen)return;chosen=true;const q=bank[qi];const ok=opt===q.ru;document.querySelectorAll(".answer").forEach(b=>{if(b.textContent===q.ru)b.classList.add("correct");else if(b===btn)b.classList.add("wrong");b.disabled=true});$("feedback").textContent=ok?"Верно! Отличная работа. +10 XP":"Почти! Правильный ответ: "+q.ru; $("feedback").style.color=ok?"var(--green)":"var(--yellow)";if(ok){if(!state.learned.includes(q.de))state.learned.push(q.de);addXP(10)}else save();$("nextQuestion").disabled=false}
-$("nextQuestion").addEventListener("click",()=>{if(!chosen)return;if(qi<bank.length-1){qi++;renderQuestion()}else{toast("Урок завершён! Ты молодец.");qi=0;renderQuestion();go("home")}});
-function renderWords(){const query=$("wordSearch").value.toLowerCase();const list=bank.filter(w=>(w.de+" "+w.ru).toLowerCase().includes(query));$("wordCount").textContent=state.learned.length+" слов";$("wordList").innerHTML="";list.forEach(w=>{const row=document.createElement("div");row.className="wordrow";row.innerHTML="<div><b></b><small></small></div><span class='tag'>"+(state.learned.includes(w.de)?"ИЗУЧЕНО":"В УРОКЕ")+"</span>";row.querySelector("b").textContent=w.de;row.querySelector("small").textContent=w.ru;$("wordList").append(row)});if(!list.length)$("wordList").innerHTML='<div class="empty">Ничего не найдено</div>';const learned=bank.filter(w=>state.learned.includes(w.de));const current=learned.length?learned[cardIndex%learned.length]:bank[0];$("flashWord").textContent=flipped?current.ru:current.de;$("flashMeaning").textContent=learned.length?(flipped?"Перевод":"Нажми «Перевернуть карточку»"):"Сначала пройди задания урока"}
-$("wordSearch").addEventListener("input",renderWords);$("flipCard").addEventListener("click",()=>{flipped=!flipped;renderWords()});$("flashcard").addEventListener("click",()=>{flipped=!flipped;renderWords()});$("knownCard").addEventListener("click",()=>{const learned=bank.filter(w=>state.learned.includes(w.de));if(!learned.length){toast("Сначала изучи несколько слов");return}cardIndex=(cardIndex+1)%learned.length;flipped=false;renderWords()});
-function renderShop(){$("shopGrid").innerHTML="";items.forEach(it=>{const owned=state.owned.includes(it.id);const el=document.createElement("div");el.className="shopitem";el.innerHTML='<div class="shopart">'+it.icon+'</div><h3>'+it.name+'</h3><p>'+it.desc+'</p><button class="btn small '+(owned?"secondary":"")+'">'+(owned?"Куплено ✓":"✦ "+it.cost)+'</button>';el.querySelector("button").disabled=owned;el.querySelector("button").addEventListener("click",()=>{if(state.coins<it.cost){toast("Пока не хватает монет");return}state.coins-=it.cost;state.owned.push(it.id);save();toast("Предмет добавлен в коллекцию!")});$("shopGrid").append(el)})}
-function render(){const l=level();$("topXp").textContent=state.xp;$("statXp").textContent=state.xp;$("profileXp").textContent=state.xp;$("topStreak").textContent=state.streak;$("streak").textContent=state.streak;$("profileStreak").textContent=state.streak;$("statWords").textContent=state.learned.length;$("profileWords").textContent=state.learned.length;$("statLevel").textContent=l;$("profileLevel").textContent=l;$("goalText").textContent=Math.min(state.goalXp,state.goal)+" / "+state.goal;$("goalBar").style.width=Math.min(100,state.goalXp/state.goal*100)+"%";$("coins").textContent=state.coins;$("goalSelect").value=String(state.goal);renderShop();renderWords()}
-$("goalSelect").addEventListener("change",e=>{state.goal=Number(e.target.value);save()});$("languageSelect").value=state.lang;$("languageSelect").addEventListener("change",e=>{state.lang=e.target.value;toast(e.target.value==="de"?"Немецкий выбран":"Этот язык появится в следующем обновлении");save()});
-$("resetProgress").addEventListener("click",()=>{if(confirm("Точно сбросить весь прогресс на этом устройстве?")){state=fresh();qi=0;renderQuestion();save();toast("Прогресс сброшен")}});
-renderQuestion();render();
-})();
-</script>
+<nav class="mobile-nav" id="mobileNav">
+  <button class="active" data-page="home"><span>⌂</span>Главная</button><button data-page="learn"><span>◌</span>Уроки</button><button data-page="vocabulary"><span>▤</span>Слова</button><button data-page="progress"><span>↗</span>Прогресс</button><button data-page="profile"><span>◎</span>Профиль</button>
+</nav>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="./app.js" defer></script>
 </body>
 </html>
