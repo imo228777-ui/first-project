@@ -98,7 +98,7 @@ let state;try{state={...fresh(),...JSON.parse(localStorage.getItem("speakly-v01"
 function save(){localStorage.setItem("speakly-v01",JSON.stringify(state));render()}
 function toast(msg){const el=$("toast");el.textContent=msg;el.classList.add("show");clearTimeout(toast.t);toast.t=setTimeout(()=>el.classList.remove("show"),2100)}
 function dayKey(){const d=new Date();return d.getFullYear()+"-"+d.getMonth()+"-"+d.getDate()}
-function activity(){const d=dayKey();if(state.lastDay!==d){const y=new Date();y.setDate(y.getDate()-1);const prev=y.getFullYear()+"-"+y.getMonth()+"-"+y.getDate();state.streak=state.lastDay===prev?state.streak+1:1;state.lastDay=d}}
+function activity(){const d=dayKey();if(state.lastDay!==d){const y=new Date();y.setDate(y.getDate()-1);const prev=y.getFullYear()+"-"+y.getMonth()+"-"+y.getDate();state.streak=state.lastDay===prev?state.streak+1:1;state.lastDay=d;state.goalXp=0}}
 function addXP(n){activity();state.xp+=n;state.goalXp+=n;state.coins+=Math.floor(n/4);if(state.goalXp>=state.goal&&!state.completed.includes(dayKey())){state.coins+=5;state.completed.push(dayKey());toast("Цель выполнена! +5 монет ✦")}save()}
 function level(){return Math.floor(state.xp/100)+1}
 function go(page){document.querySelectorAll(".page").forEach(p=>p.classList.toggle("active",p.id==="page-"+page));document.querySelectorAll("[data-page]").forEach(b=>b.classList.toggle("active",b.dataset.page===page));window.scrollTo({top:0,behavior:"smooth"});if(page==="words")renderWords()}
