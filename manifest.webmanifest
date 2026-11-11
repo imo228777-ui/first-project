@@ -1,1 +1,11 @@
-{"name":"Speakly — учись в своём темпе","short_name":"Speakly","start_url":"./","scope":"./","display":"standalone","background_color":"#f5f3eb","theme_color":"#f5f3eb","description":"Спокойное пространство для изучения языков.","icons":[]}
+{
+  "name":"Speakly — учись в своём темпе",
+  "short_name":"Speakly",
+  "start_url":"./",
+  "scope":"./",
+  "display":"standalone",
+  "background_color":"#f5f3eb",
+  "theme_color":"#f5f3eb",
+  "description":"Спокойное пространство для изучения языков.",
+  "icons":[{"src":"./icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}
