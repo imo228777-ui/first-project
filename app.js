@@ -31,7 +31,8 @@ const shopItems=[
 {id:'frame-sage',type:'frame',name:'Мягкая зелень',desc:'Природная рамка профиля',icon:'🟢',price:60}
 ];
 const fresh=()=>({name:'Explorer',xp:0,coins:30,streak:0,goal:20,goalXp:0,lastDay:'',daily:{},learned:[],favorites:[],reviews:{},completed:[],owned:[],equipped:{theme:'',avatar:'',accessory:'',frame:''},reminders:false,lessonRuns:0,earned:[]});
-let state;try{const raw=JSON.parse(localStorage.getItem(KEY)||'null');state=raw?{...fresh(),...raw}:fresh()}catch{state=fresh()}\nstate.earned=Array.isArray(state.earned)?state.earned:[];
+let state;try{const raw=JSON.parse(localStorage.getItem(KEY)||'null');state=raw?{...fresh(),...raw}:fresh()}catch{state=fresh()}
+state.earned=Array.isArray(state.earned)?state.earned:[];
 let currentChapter=0,questionIndex=0,answers=[],selected=null,checked=false,activeGrammar=0,shopFilter='all',flashIndex=0,flashShown=false;
 function persist(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch{notify('Не удалось сохранить данные браузера. Проверь свободное место.')}renderAll()}
 function notify(message){const t=$('toast');t.textContent=message;t.classList.add('show');clearTimeout(notify.timer);notify.timer=setTimeout(()=>t.classList.remove('show'),2300)}
