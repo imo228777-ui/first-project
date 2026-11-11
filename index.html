@@ -16,13 +16,13 @@
     <a class="brand" href="#home"><span class="brand-mark">s</span><span>speakly<span class="brand-dot">.</span></span></a>
     <div class="side-label">ТВОЁ ПРОСТРАНСТВО</div>
     <nav id="sideNav" class="side-nav">
-      <button class="nav-item active" data-page="home"><span class="nav-icon">⌂</span>Главная</button>
-      <button class="nav-item" data-page="learn"><span class="nav-icon">◌</span>Обучение</button>
-      <button class="nav-item" data-page="vocabulary"><span class="nav-icon">▤</span>Словарь</button>
-      <button class="nav-item" data-page="grammar"><span class="nav-icon">Aa</span>Грамматика</button>
-      <button class="nav-item" data-page="progress"><span class="nav-icon">↗</span>Мой прогресс</button>
-      <button class="nav-item" data-page="shop"><span class="nav-icon">✳</span>Магазин</button>
-      <button class="nav-item" data-page="community"><span class="nav-icon">♧</span>Клубы</button>
+      <button class="nav-item active" data-page="home"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5M5.5 9.5V21h13V9.5M9 21v-7h6v7"/></svg></span>Главная</button>
+      <button class="nav-item" data-page="learn"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm0 4v5l3 2"/></svg></span>Обучение</button>
+      <button class="nav-item" data-page="vocabulary"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h14v18H5zM8 7h8M8 11h8M8 15h6"/></svg></span>Словарь</button>
+      <button class="nav-item" data-page="grammar"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19 10 5l6 14M6.5 14h7M17 10h4M19 10v9"/></svg></span>Грамматика</button>
+      <button class="nav-item" data-page="progress"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17 10 11l4 4 6-8M14 7h6v6"/></svg></span>Мой прогресс</button>
+      <button class="nav-item" data-page="shop"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v20M2 12h20M5 5l14 14M19 5 5 19"/></svg></span>Магазин</button>
+      <button class="nav-item" data-page="community"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21V9m0 4C4 13 4 4 4 4s9-1 8 9m0 0c0-8 8-9 8-9s1 9-8 9"/></svg></span>Клубы</button>
     </nav>
     <div class="sidebar-bottom">
       <div class="mini-explorer" aria-hidden="true"><div class="explorer-face">◡</div><span class="spark s1">✦</span><span class="spark s2">·</span></div>
@@ -127,7 +127,7 @@
     <section class="page" id="page-profile">
       <div class="page-heading"><span class="eyebrow">YOUR ACCOUNT</span><h1>Твой профиль<span class="title-period">.</span></h1><p class="lead">Настрой Speakly под себя.</p></div>
       <div class="profile-panel"><div class="profile-avatar large" id="profileAvatar">E</div><div class="profile-details"><h2 id="profileName">Explorer</h2><p id="profileLevelText">Уровень 1 · Начинающий</p><button class="text-button" id="editName">Изменить имя ↗</button></div></div>
-      <div class="settings-panel"><div class="settings-heading"><span class="eyebrow">PREFERENCES</span><h2>Настройки обучения</h2></div><label class="setting-row"><span><b>Язык курса</b><small>Сейчас доступен курс немецкого A1</small></span><select id="languageSetting" class="field select-field"><option value="de">🇩🇪 Немецкий</option></select></label><label class="setting-row"><span><b>Ежедневная цель</b><small>Сколько опыта хочешь набирать в день</small></span><select id="goalSetting" class="field select-field"><option value="10">10 XP</option><option value="20">20 XP</option><option value="30">30 XP</option><option value="50">50 XP</option></select></label><label class="setting-row"><span><b>Напоминания</b><small>Локальное напоминание в интерфейсе</small></span><input id="remindersSetting" type="checkbox" class="toggle"></label></div>
+      <div class="settings-panel"><div class="settings-heading"><span class="eyebrow">PREFERENCES</span><h2>Настройки обучения</h2></div><label class="setting-row"><span><b>Язык курса</b><small>Сейчас доступен курс немецкого A1</small></span><select id="languageSetting" class="field select-field"><option value="de">Deutsch · Немецкий</option></select></label><label class="setting-row"><span><b>Ежедневная цель</b><small>Сколько опыта хочешь набирать в день</small></span><select id="goalSetting" class="field select-field"><option value="10">10 XP</option><option value="20">20 XP</option><option value="30">30 XP</option><option value="50">50 XP</option></select></label><label class="setting-row"><span><b>Напоминания</b><small>Локальное напоминание в интерфейсе</small></span><input id="remindersSetting" type="checkbox" class="toggle"></label></div>
       <div class="settings-panel danger-panel"><div><span class="eyebrow">YOUR DATA</span><h2>Данные и приватность</h2><p>Прогресс сейчас хранится локально в браузере этого устройства. Не очищай данные браузера, если хочешь сохранить его.</p></div><div class="data-actions"><button class="button button-outline" id="exportData">Экспортировать данные</button><button class="button button-danger" id="resetData">Сбросить прогресс</button></div></div>
       <p class="privacy-note">Гостевой режим · Без регистрации · Данные остаются на этом устройстве.</p>
     </section>
